@@ -1,0 +1,670 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.header {
+  position: fixed;
+  z-index: 5;
+  top: 5px;
+  width: 100%;
+}
+.container {
+  width: 75%;
+  margin: auto;
+}
+.header .header-content {
+  padding: 10px 15px;
+  background-color: rgba(248, 217, 167, 0.8);
+  border-radius: 10px;
+}
+.header .header-content .clear {
+  clear: both;
+}
+.header .header-search {
+  float: left; /* ------------------------------------------------------------------------------------------------------------ */
+}
+.header .header-search img {
+  width: 100px;
+  height: 30px;
+  margin-right: 10px;
+  float: left;
+}
+.header .header-search div {
+  position: relative;
+  float: left;
+}
+.header .header-search div input {
+  width: 200px;
+  height: 30px;
+  padding-left: 35px;
+  border: none;
+  background-color: rgb(248, 233, 214);
+  border-radius: 8px;
+}
+.header .header-search div i {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  font-size: 16px;
+  transform: translate(0%, -50%);
+}
+.header .header-links {
+  float: right;
+  margin-top: 5px;
+  position: relative;
+}
+.header .header-links ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 15px;
+}
+.header .header-links ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  opacity: 1;
+  position: relative;
+}
+.header .header-links ul li a:hover {
+  color: rgb(151, 95, 40);
+}
+.header .header-links ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0%;
+  bottom: -5px;
+  height: 1px;
+  width: 0;
+  background: rgb(151, 95, 40);
+  transition: 0.3s;
+}
+.header .header-links ul li a:hover::after {
+  width: 100%;
+}
+.header .header-links ul .dropdown {
+  position: absolute;
+  top: 20px;
+  left: 80px;
+  border-radius: 8px;
+  padding: 15px 15px 5px;
+  visibility: hidden;
+  opacity: 0;
+}
+.header .header-links ul .active:hover .dropdown {
+  background-color: rgb(248, 233, 214);
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+.header .header-links ul .dropdown li {
+  display: block;
+  margin-bottom: 10px;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.section {
+  text-align: center;
+  padding: 50px 0;
+}
+.section-title {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.title-line {
+  height: 2px;
+  width: 110px;
+  display: block;
+  background-color: rgb(151, 95, 40);
+  margin: auto;
+}
+.section-content {
+  margin: 25px 0px 0px;
+  overflow: auto;
+}
+.card {
+  float: left;
+  width: 30.5%;
+  border: 1px solid black;
+  padding: 20px 5px 15px;
+  border-radius: 15px;
+  position: relative;
+}
+.card-2 {
+  margin: 0px 4.25%;
+}
+h3 {
+  font-size: 20px;
+  color: rgb(177, 128, 79);
+  opacity: 0.7;
+}
+.section-content .card p {
+  color: #250d13;
+  margin: 10px 0px;
+  opacity: 0.7;
+}
+a {
+  text-decoration: none;
+  color: rgb(37, 13, 19);
+  font: 700 14px;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+i {
+  font-size: 22px;
+  color: rgb(37, 13, 19);
+  opacity: 0.7;
+}
+.section-content .card:hover i,
+.section-content .card:hover h3,
+.section-content .card:hover p,
+.section-content .card:hover a {
+  opacity: 1;
+  transition: 0.7s;
+}
+p {
+  font: 100 13px sans-serif;
+  line-height: 20px;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.hero-section {
+  text-align: center;
+  background: url("../images/hero-bg.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+.hero-section .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+.hero-section .hero-content h1 {
+  font-size: 50px;
+  color: #250d13;
+  text-transform: uppercase;
+}
+.hero-section .hero-content p {
+  letter-spacing: 1.5px;
+  line-height: 18px;
+  color: rgb(206, 192, 176);
+  width: 80%;
+  margin: 10px auto 15px;
+}
+.hero-section .hero-content .btn-learn,
+.hero-section .hero-content .btn-get {
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.hero-section .hero-content .btn-learn {
+  background: rgb(253, 244, 233);
+  color: rgb(37, 13, 19);
+  margin-right: 10px;
+}
+.hero-section .hero-content .btn-get {
+  background: rgb(177, 128, 79);
+  color: rgb(255, 255, 255);
+}
+
+.hero-section .hero-content .btn:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.welcome-section {
+  position: relative;
+}
+.welcome-card:hover,
+.offers-card:hover,
+.pricing-card:hover,
+.recent-card:hover {
+  border: 1px solid rgba(247, 233, 217, 0);
+}
+.welcome-card::after,
+.offers-card::after,
+.pricing-card::after,
+.recent-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0%;
+  width: 0%;
+  z-index: -1;
+  background-color: rgb(247, 233, 217);
+}
+.welcome-card:hover::after,
+.offers-card:hover::after,
+.pricing-card:hover::after,
+.recent-card:hover::after {
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  opacity: 0.7;
+  top: 0%;
+  left: 0%;
+  border-radius: 15px;
+}
+.welcome-card i {
+  margin: 5px;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.featured-section {
+  background-color: rgb(250, 238, 221);
+  padding-bottom: 15px;
+}
+.featured-section .featured-card {
+  border: 0;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.featured-section .featured-card img {
+  width: 100%;
+  border-radius: inherit;
+  height: 240px;
+  opacity: 0.8;
+}
+.featured-section .featured-card .overlay,
+.choose-section .choose-view::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  opacity: 0;
+  z-index: 1;
+}
+.featured-section .featured-card:hover .overlay,
+.choose-section .choose-view:hover::after {
+  opacity: 1;
+  transition: 0.7s;
+}
+.featured-section .featured-card:hover .overlay h3 {
+  margin-top: 80px;
+}
+.featured-section .featured-card:hover .overlay p {
+  color: rgb(206, 192, 176);
+}
+.featured-section .featured-card:hover .overlay i {
+  color: rgb(250, 238, 221);
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.offers-section {
+  padding-bottom: 10px;
+}
+.offers-section .offers-content .offers-card {
+  margin-bottom: 30px;
+}
+.offers-section .offers-content .offers-card::after {
+  top: 0%;
+  right: 0;
+  left: auto;
+}
+.offers-section .offers-content .offers-card i {
+  font-size: 20px;
+}
+.offers-section .offers-content .offers-card h3 {
+  display: inline-block;
+  margin-left: 5px;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.choose-section {
+  overflow: auto;
+  padding: 50px 0px 50px;
+}
+.choose-section span {
+  margin: 0px;
+}
+.choose-content {
+  float: left;
+  width: 70%;
+}
+.choose-content p {
+  margin: 20px 0 10px;
+  width: 70%;
+  opacity: 0.7;
+}
+.choose-content ul li {
+  list-style: none;
+  line-height: 33px;
+  color: rgb(37, 13, 19);
+  opacity: 0.6;
+  font: 100 sans-serif;
+}
+.choose-content ul li i {
+  font-size: 16px;
+  color: rgb(177, 128, 79);
+}
+.choose-section .choose-view {
+  float: right;
+  width: 30%;
+  height: 50vh;
+  position: relative;
+}
+.choose-section .choose-view {
+  width: 30%;
+  height: 50vh;
+}
+.choose-section .choose-view img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+}
+.choose-section .choose-view span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  bottom: 30px;
+  left: 50%;
+  background-color: rgba(187, 114, 42, 0.4);
+  transform: translate(-50%, 0%);
+  border-radius: 50%;
+  z-index: 2;
+  transition: 0.7s;
+  visibility: hidden;
+}
+.choose-section .choose-view span:hover {
+  background-color: rgb(187, 114, 42);
+  padding: 10px;
+  transform: translate(-50%, 10%);
+  transition: 0.3s;
+}
+.choose-section .choose-view .point-1 {
+  background-color: rgb(187, 114, 42);
+  left: -5%;
+}
+.choose-section .choose-view:hover .point-1 {
+  left: 40%;
+}
+.choose-section .choose-view .point-3 {
+  left: 105%;
+}
+.choose-section .choose-view:hover .point-3 {
+  left: 60%;
+}
+.choose-section .choose-view:hover .point-1,
+.choose-section .choose-view:hover .point-2,
+.choose-section .choose-view:hover .point-3 {
+  visibility: visible;
+}
+
+/* ------------------------------------------------------------------------------------------------------------ */
+.review-section {
+  height: 40vh;
+  background: url("../images/review-bg.jpg") no-repeat fixed center;
+  background-size: cover;
+  position: relative;
+}
+.review-section::after,
+.owners-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.review-section .review-item {
+  float: left;
+  margin-top: 4%;
+  width: 25%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.review-section .review-item i {
+  color: rgb(151, 95, 40);
+  font-size: 35px;
+  opacity: 1;
+}
+.review-section .review-item h3 {
+  margin: 10px 0px 5px;
+  color: rgb(206, 192, 176);
+}
+.review-section .review-item p {
+  letter-spacing: 1px;
+  color: rgb(224, 198, 167);
+  font-size: 14px;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.pricing-section {
+  padding: 70px 0px;
+}
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  height: 0%;
+  width: 0%;
+  z-index: -1;
+  background: rgb(247, 233, 217);
+}
+.pricing-card::after {
+  top: 0%;
+  left: 0%;
+}
+.pricing-card:hover::after {
+  background: rgba(247, 233, 217, 0.3);
+  transition: 0.7s;
+}
+.pricing-card:hover::before {
+  width: 100%;
+  height: 100%;
+  transition: 0.7s;
+  border-radius: 15px;
+  background: rgba(247, 233, 217, 0.4);
+}
+.pricing-section .pricing-card .price {
+  height: 100px;
+  width: 100px;
+  display: inline-block;
+  border-radius: 50%;
+  font-size: 22px;
+  padding-top: 18px;
+  margin: 20px 0px 10px;
+  border: 2px solid rgb(177, 128, 79);
+  color: rgb(37, 13, 19);
+  opacity: 0.7;
+}
+.pricing-section .pricing-card ul li {
+  margin: 10px 0px;
+  color: #250d13;
+  font-size: 14px;
+  opacity: 0.6;
+  list-style: none;
+}
+.pricing-section .pricing-card:hover ul li,
+.pricing-section .pricing-card:hover .price {
+  opacity: 1;
+  transition: 0.7s;
+}
+.pricing-section .pricing-card button {
+  margin: 10px 0px 20px;
+  padding: 10px 15px;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 3px solid rgb(119, 119, 119);
+  border-top: 0;
+  border-left: 0;
+  background-color: rgba(247, 233, 217, 0.7);
+  color: rgba(37, 13, 19, 0.7);
+}
+.pricing-section .pricing-card button:hover {
+  color: rgb(37, 13, 19);
+  background-color: rgb(247, 233, 217);
+  transition: 0.5s;
+  transform: translate(8%, 8%);
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.owners-section {
+  height: 45vh;
+  background: url("../images/owners-bg.jpeg") no-repeat fixed center;
+  background-size: cover;
+  position: relative;
+  text-align: start;
+}
+.owners-section .owner-card {
+  float: left;
+  width: 50%;
+  position: relative;
+  z-index: 1;
+  margin-top: 2.5%;
+}
+.owners-section .owner-card img {
+  height: 80px;
+  width: 80px;
+  float: left;
+  margin: 20px 10px 0px 0px;
+}
+.owners-section .owner-card .owner-info {
+  float: left;
+  margin-top: 25px;
+}
+.owners-section .owner-card .owner-info h2 {
+  margin: 8px 0px;
+  color: rgb(206, 192, 176);
+}
+.owners-section .owner-card .owner-info h3 {
+  color: rgb(224, 198, 167);
+  font-size: 15px;
+}
+.owners-section .owner-card p {
+  color: rgb(119, 119, 119);
+  float: left;
+  width: 90%;
+  font-size: 14px;
+  margin-top: 20px;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.team-section {
+  text-align: center;
+}
+.team-section .team-card {
+  padding: 0;
+}
+.team-section .team-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  height: 0%;
+  width: 100%;
+  z-index: -1;
+  background-color: rgb(247, 233, 217);
+}
+.team-section .team-card:hover::after {
+  height: 100%;
+  transition: 0.7s;
+}
+.team-section .team-card .overlay,
+.recent-section .recent-card img {
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+.team-section .team-card .overlay .contacts,
+.footer .footer-content .overlay .contacts {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  visibility: hidden;
+}
+.team-section .team-card:hover .overlay .contacts,
+.footer .footer-content .overlay:hover .contacts {
+  background: rgba(0, 0, 0, 0.5);
+  visibility: visible;
+  transition: 0.7s;
+}
+.team-section .team-card .overlay img,
+.footer .footer-content .overlay img {
+  width: 100%;
+  border-radius: inherit;
+  height: inherit;
+}
+.team-section .team-card .overlay .contacts a,
+.footer .footer-content .overlay .contacts a {
+  display: inline-block;
+  margin: 280px 0px 0px 30px;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(247, 233, 217, 0.7);
+  border-radius: 50%;
+  transition: 0.7s;
+}
+.team-section .team-card:hover .overlay .contacts a,
+.footer .footer-content .overlay:hover .contacts a {
+  margin: 200px 0px 0px 5px;
+}
+.team-section .team-card .overlay .contacts a i,
+.footer .footer-content .overlay .contacts a i {
+  line-height: 35px;
+  color: rgba(37, 13, 19, 0.7);
+}
+.team-section .team-card .overlay .contacts a:hover,
+.footer .footer-content .overlay .contacts a:hover {
+  background-color: rgb(247, 233, 217);
+}
+.team-section .team-card .overlay .contacts a:hover i,
+.footer .footer-content .overlay .contacts a:hover i {
+  color: rgb(37, 13, 19);
+  opacity: 1;
+  transition: 0.7s;
+}
+.team-section .team-card p {
+  margin: 8px 0 20px;
+  font-size: 14px;
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.recent-section {
+  text-align: center;
+}
+.recent-section .recent-content .recent-card p {
+  font-size: 14px;
+}
+.recent-section .recent-content .recent-card p i {
+  font-size: 16px;
+}
+.recent-section .recent-content .recent-card p span {
+  margin-right: 8px;
+}
+.recent-section .recent-content .recent-card::after {
+  left: 0%;
+  top: 0;
+  height: 100%;
+}
+.recent-section .recent-content .recent-card:hover::after {
+  transform: translate(0%, 0%);
+}
+/* ------------------------------------------------------------------------------------------------------------ */
+.footer {
+  background-color: rgb(250, 238, 221);
+  color: rgb(37, 13, 19);
+  text-align: center;
+  padding: 25px 0px 20px;
+}
+.footer .footer-content .overlay {
+  width: 420px;
+  border-radius: 15px;
+  margin: auto;
+  position: relative;
+}
+.footer .footer-content p {
+  font-size: 14px;
+  margin-top: 15px;
+}
