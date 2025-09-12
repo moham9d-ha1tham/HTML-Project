@@ -348,12 +348,8 @@ p {
 .choose-section .choose-view {
   float: right;
   width: 30%;
-  height: 50vh;
+  height: 350px;
   position: relative;
-}
-.choose-section .choose-view {
-  width: 30%;
-  height: 50vh;
 }
 .choose-section .choose-view img {
   border-radius: 15px;
